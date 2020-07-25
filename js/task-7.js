@@ -93,15 +93,15 @@ const account = {
    * определенного типа транзакции из всей истории транзакций
    */
   getTransactionTotal(type) {
-    let tr = 0;
+    let quantityTransaction = 0;
 
     for(const transaction of this.transactions) {
 
       if (transaction['type'] === type) {
-        tr += transaction.amount;
+        quantityTransaction += transaction.amount;
       }
     }
-      return tr;
+      return quantityTransaction;
   },
 };
 
